@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kasensa Mupeyo — Portfolio</title>
+  <meta name="description" content="Portfolio of Kasensa Mupeyo — Software Engineering student & automotive electronics enthusiast." />
+
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#00c09b;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#081024 0%,var(--bg) 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    main{max-width:var(--maxw);margin:28px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; /* removes gradient background */
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    nav{display:flex;gap:12px}
+    nav a{padding:10px 12px;border-radius:10px;font-size:14px}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .intro h1{margin:0 0 6px 0;font-size:28px}
+    .intro p.lead{color:var(--muted);margin:0 0 12px}
+    .cta{display:flex;gap:10px;margin-top:10px}
+    .btn{background:var(--accent);color:#00121a;padding:10px 14px;border-radius:10px;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .stats{display:flex;gap:12px;margin-top:16px}
+    .stat{background:var(--glass);padding:10px;border-radius:10px;min-width:110px;text-align:center}
+    .stat b{display:block;font-size:18px}
+
+    /* Right column */
+    .contact-card{padding:18px;display:flex;flex-direction:column;gap:10px}
+    .contact-card h3{margin:0}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
+
+    section{margin-top:22px}
+    h2{margin:0 0 12px 0}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01))}
+    .project h4{margin:0 0 8px}
+    .tech{color:var(--muted);font-size:13px}
+
+    .resume{display:flex;align-items:center;gap:12px}
+
+    footer{margin:40px 0 80px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      nav{display:none}
+      .grid-3{grid-template-columns:1fr}
+      .avatar{width:56px;height:56px}
+      .hero{gap:14px}
+    }
+
+    /* small form */
+    .contact-form{display:flex;flex-direction:column;gap:10px}
+    .contact-form input,.contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:inherit}
+    .contact-form textarea{min-height:110px}
+
+    .badge{display:inline-block;padding:6px 10px;background:rgba(0,0,0,0.25);border-radius:999px;font-size:12px}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <div class="avatar">
+  <img src="Potfolio.jpeg" alt="KM" />
+</div>
+
+        <div>
+          <div style="font-weight:700">Kasensa Mupeyo</div>
+          <div style="color:var(--muted);font-size:13px">Software Engineering student • Automotive electronics & EFI tuning</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="pill">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card intro">
+        <h1>Hi — I'm Kasensa.</h1>
+        <p class="lead">4th-year Software Engineering student at Adventist University of Central Africa (AUCA). Passionate about car electronics, EFI tuning, and embedded systems. Currently building skills in HTML, Java, C, DBMS and PL/SQL.</p>
+
+        <div class="cta">
+          <a class="btn" href="#work">View my work</a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <b>EFI Certified</b>
+            <small class="meta">High Performance Academy — 2024</small>
+          </div>
+          <div class="stat">
+            <b>4th Year</b>
+            <small class="meta">Software Engineering — AUCA</small>
+          </div>
+          <div class="stat">
+            <b>Car Systems</b>
+            <small class="meta">Tuning • Key programming • Infotainment</small>
+          </div>
+        </div>
+
+        <section id="about">
+          <h2>About</h2>
+          <div class="card" style="padding:14px;margin-top:10px">
+            <p style="margin:0;color:var(--muted)">Born May 24, 2004 in Lusaka, Zambia. Education: Kalulushi Trust School (Junior Secondary, 2017–2018), David Kaunda National Technical School (Senior Secondary, 2019–2021), currently at AUCA. Certified in EFI tuning (High Performance Academy, 2024). I combine practical automotive electronics experience with software skills to build tools and workflows for vehicle systems.</p>
+          </div>
+        </section>
+
+        <section id="work">
+          <h2 style="margin-top:16px">Selected Projects</h2>
+          <div class="grid-3">
+            <article class="project">
+              <h4>EFI Calibration — Personal Project</h4>
+              <div class="tech">Role: Lead tuner • Tools: ECU software, datalogging</div>
+              <p style="color:var(--muted);font-size:14px">Custom calibration work for improved throttle response and fuel economy on a naturally-aspirated 4-cylinder. Data-driven approach with log analysis and stepwise changes.</p>
+            </article>
+
+            <article class="project">
+              <h4>Infotainment Setup & Integration</h4>
+              <div class="tech">Role: Installer • Tools: CAN-bus adapters, head units</div>
+              <p style="color:var(--muted);font-size:14px">Installed and configured aftermarket infotainment systems with steering-wheel control integration, reversing camera, and audio tuning.</p>
+            </article>
+
+            <article class="project">
+              <h4>Key & ECU Programming</h4>
+              <div class="tech">Role: Technician • Tools: OBD programming tools</div>
+              <p style="color:var(--muted);font-size:14px">Key reprogramming and basic ECU programming for immobilizer and key-sync operations on multiple vehicle models.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2 style="margin-top:16px">Education & Certification</h2>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <div class="card" style="padding:12px">
+              <strong>Adventist University of Central Africa</strong>
+              <div class="meta">B.Sc. Software Engineering — 4th year (in progress)</div>
+            </div>
+            <div class="card" style="padding:12px">
+              <strong>High Performance Academy</strong>
+              <div class="meta">EFI Tuning Certification — 2024</div>
+            </div>
+            <div class="card" style="padding:12px">
+              <strong>David Kaunda National Technical School</strong>
+              <div class="meta">Senior Secondary — 2019–2021</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="card contact-card" id="contact">
+        <h3>Contact & Quick Info</h3>
+        <div class="meta">Lusaka, Zambia · Zambian</div>
+
+        <div class="links">
+          <div class="pill">Born: 24 May 2004</div>
+          <div class="pill">Languages: English</div>
+          <div class="pill">Interests: Cars • Embedded systems • Software</div>
+        </div>
+
+        <div style="margin-top:6px">
+          <strong>Email</strong>
+          <div class="meta">Mupeyokasensa@gmail.com — or use the contact form below</div>
+        </div>
+
+        <div style="margin-top:8px">
+          <strong>Quick links</strong>
+          <div class="meta" style="margin-top:6px">GitHub-Kasensa1720 / Instagram-mpk_1720/ / Linkedin-Kasensa mupeyo</div>
+        </div>
+
+        <div style="margin-top:10px">
+          <strong>Contact me</strong>
+          <form class="contact-form" onsubmit="handleContact(event)">
+            <input id="name" placeholder="Your name" required />
+            <input id="email" placeholder="Your email" type="email" required />
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button type="submit" class="btn">Send message</button>
+          </form>
+        </div>
+
+        <div style="margin-top:12px">
+          <strong>  Resume       </strong>
+          <div class="resume">
+            <div class="meta">  Founder, Director and CEO at Darkstar Enterprises Limited      </div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:13px">
+          
+        </div>
+      </aside>
+    </div>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+        <span class="badge">EFI Tuning</span>
+        <span class="badge">ECU & Key Programming</span>
+        <span class="badge">CAN-bus / Infotainment</span>
+        <span class="badge">HTML (Beginner)</span>
+        <span class="badge">Java (Beginner)</span>
+        <span class="badge">C (Beginner)</span>
+        <span class="badge">DBMS / PL/SQL (Beginner)</span>
+      </div>
+    </section>
+
+    <footer>
+      Built by Kasensa Mupeyo • © 2025
+    </footer>
+  </main>
+
+  <script>
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      const message=document.getElementById('message').value.trim();
+      // Basic client-side action: open mailto — swap to API backend when you have one
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\nMessage:\n'+message);
+      window.location.href = `mailto:mupeyokasensa@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
